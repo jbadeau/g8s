@@ -43,7 +43,7 @@ spec:
           id: 32432
       matchingRules:
         body:
-          "$":
+          $:
 	    matchers:
 	    - match: type
 	      min: 1

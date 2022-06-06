@@ -21,31 +21,30 @@ spec:
   owner: todo-team
   system: todo
   definition:
-	type: Synchronous/HTTP
-	request:
-	  method: GET
-	  path: "/api/test/8"
-	  matchingRules:
-	    path:
-	      matchers:
-	      - match: regex
-	        regex: "/api/test/\\d{1,8}"
-	response:
-	  status: 200
-	  headers:
-	    Content-Type: application/json
-	  body:
-	    contentType: application/json
-	    encoded: false
-	    content:
-	    - size: 1445211
-	      name: testId254
-	      id: 32432
-	  matchingRules:
-	    body:
-	      "$":
-	        matchers:
-	        - match: type
-	          min: 1
-
+    type: Synchronous/HTTP
+    request:
+      method: GET
+      path: "/api/test/8"
+      matchingRules:
+        path:
+          matchers:
+          - match: regex
+	    regex: "/api/test/\\d{1,8}"
+    response:
+      status: 200
+      headers:
+        Content-Type: application/json
+      body:
+        contentType: application/json
+        encoded: false
+        content:
+        - size: 1445211
+          name: testId254
+          id: 32432
+      matchingRules:
+        body:
+          "$":
+	    matchers:
+	    - match: type
+	      min: 1
 ```
